@@ -1,0 +1,9 @@
+Superuser ->
+Username - root
+pass - root
+
+Steps -> 
+migrate
+create supertuser
+give name and pass
+login
