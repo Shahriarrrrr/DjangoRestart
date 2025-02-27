@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Registration Forms</h1>
+    {% comment %} Complete Form at once {% endcomment %} {% comment %}
+    <form action="">
+      {{form}}
+      <input type="submit" value="Submit" />
+    </form>
+    {% endcomment %} {% comment %} Field By Field {% endcomment %} {% comment %}
+    <form action="">
+      {{form.first_name.label_tag}} {{form.first_name}} <br />
+      {{form.last_name.label_tag}} {{form.last_name}} <br />
+      <input type="submit" value="Submit" />
+    </form>
+    {% endcomment %} {% comment %}
+    <form action="">
+      <label for="">First Name:</label> {{form.first_name}} <br />
+      <label for="">Last Name:</label> {{form.last_name}} <br />
+      <input type="submit" value="Submit" />
+    </form>
+    {% endcomment %}
+
+    <form action="">
+      <label for="{{form.first_name.id_for_label}}">First Name: </label>
+      <input type="text" name="{{form.first_name.name}}" required id="{{form.first_name.id_for_label}}">
+      <br />
+      <label for="{{form.last_name.id_for_label}}">Last Name: </label>
+      <input type="text" name="{{form.last_name.name}}" required id="{{form.last_name.id_for_label}}">
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
